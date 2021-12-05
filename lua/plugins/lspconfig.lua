@@ -50,7 +50,7 @@ return function()
     end
 
     lspconfig.elixirls.setup {
-        cmd = {"/Users/abhishektripathi/.elixir-ls/release/language_server.sh"},
+        cmd = {"~/.elixir-ls/release/language_server.sh"},
         settings = {
             elixirLS = {dialyzerEnabled = false}
         },

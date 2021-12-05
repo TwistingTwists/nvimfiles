@@ -79,10 +79,10 @@ return require("packer").startup(
 
         -- prints vertical lines at each indentation level. requires treesitter
         -- disabled, because https://github.com/lukas-reineke/indent-blankline.nvim/issues/141
-        -- use {
-        --   "lukas-reineke/indent-blankline.nvim",
-        --   config = require "plugins.indent-blankline"
-        -- }
+        use {
+          "lukas-reineke/indent-blankline.nvim",
+          config = require "plugins.indent-blankline"
+        }
 
         -- open files in file:line_number format from CLI, useful with `neovim-remote` tool
         use "wsdjeg/vim-fetch"
@@ -147,7 +147,7 @@ return require("packer").startup(
         -- Fancy startup screen
         use "mhinz/vim-startify"
 
-        -- -- grep, perhaps I'll replace it by telescope. Some day
+        -- grep, perhaps I'll replace it by telescope. Some day
         -- use {
         --     "dkprice/vim-easygrep",
         --     config = require "plugins.easygrep"
