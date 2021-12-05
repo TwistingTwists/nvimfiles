@@ -181,5 +181,15 @@ return require("packer").startup(
         use "edwinb/idris2-vim"
 
         use "dhruvasagar/vim-table-mode"
+
+        -- tokoynight theme
+        use 'folke/tokyonight.nvim'
+
+        -- catppucin nvim theme from 
+        use({
+        "catppuccin/nvim",
+        as = "catppuccin",
+        config = function() vim.cmd[[colorscheme catppuccin]] end, })
+
     end
 )

@@ -96,3 +96,6 @@ vim.opt.diffopt = "filler,internal,algorithm:histogram,indent-heuristic"
 
 -- mouse support
 vim.o.mouse = "a"
+
+-- default theme for neovim
+-- vim.cmd[[colorscheme tokyonight]]
