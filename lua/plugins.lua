@@ -163,7 +163,8 @@ return require("packer").startup(
         }
 
         -- for autocompletion, intellisense and code-completion
-        use {'neoclide/coc.nvim', branch = 'release'}
+        use {'neoclide/coc.nvim', branch = 'release',
+        config = require "plugins.cocnvim"}
 
 
         -- Show an icon in autocompletion list
