@@ -50,8 +50,7 @@ return function()
     end
 
     lspconfig.elixirls.setup {
-        on_attach = on_attach,
-        cmd = {"/home/fuelen/projects/elixir-ls/language_server.sh"},
+        cmd = {"/Users/abhishektripathi/.elixir-ls/release/language_server.sh"},
         settings = {
             elixirLS = {dialyzerEnabled = false}
         },

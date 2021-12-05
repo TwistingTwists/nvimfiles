@@ -114,22 +114,22 @@ return require("packer").startup(
             config = require "plugins.gitsigns"
         }
 
-        -- show git blame in cursor line
-        use {
-            "f-person/git-blame.nvim",
-            config = require "plugins.git-blame"
-        }
+        -- -- show git blame in cursor line
+        -- use {
+        --     "f-person/git-blame.nvim",
+        --     config = require "plugins.git-blame"
+        -- }
 
         -- plugin for git
         use "tpope/vim-fugitive"
 
-        -- collection of common configurations for built-in language server client
-        use {
-            "neovim/nvim-lspconfig",
-            config = require "plugins.lspconfig"
-        }
+        -- -- collection of common configurations for built-in language server client
+        -- use {
+        --     "neovim/nvim-lspconfig",
+        --     config = require "plugins.lspconfig"
+        -- }
 
-        -- can be removed in the future when elixir plugin for treesitter is improved
+        -- -- can be removed in the future when elixir plugin for treesitter is improved
         use "elixir-editors/vim-elixir"
 
         --  highly extendable fuzzy finder over lists
@@ -147,11 +147,11 @@ return require("packer").startup(
         -- Fancy startup screen
         use "mhinz/vim-startify"
 
-        -- grep, perhaps I'll replace it by telescope. Some day
-        use {
-            "dkprice/vim-easygrep",
-            config = require "plugins.easygrep"
-        }
+        -- -- grep, perhaps I'll replace it by telescope. Some day
+        -- use {
+        --     "dkprice/vim-easygrep",
+        --     config = require "plugins.easygrep"
+        -- }
 
         -- better design for quick-fix window, it is used in easygrep, vim-fugitive, etc
         use "kevinhwang91/nvim-bqf"
@@ -161,6 +161,10 @@ return require("packer").startup(
             "folke/which-key.nvim",
             config = require "plugins.which-key"
         }
+
+        -- for autocompletion, intellisense and code-completion
+        use {'neoclide/coc.nvim', branch = 'release'}
+
 
         -- Show an icon in autocompletion list
         use {
