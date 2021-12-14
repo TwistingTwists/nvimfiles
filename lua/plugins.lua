@@ -192,5 +192,9 @@ return require("packer").startup(
         as = "catppuccin",
         config = function() vim.cmd[[colorscheme catppuccin]] end, })
 
+    use 'ful1e5/onedark.nvim'
+--        use ({'gruvbox-community/gruvbox', as = 'gruvbox', config = require 'plugins.gruvbox
+
+
     end
 )
