@@ -18,12 +18,16 @@ return require("packer").startup(
             config = require "plugins.illuminate"
         }
 
-        -- display colors in file
-        use {
-            "rrethy/vim-hexokinase",
-            config = require "plugins.hexokinase",
-            run = "make hexokinase"
+        use{
+            "mattn/emmet-vim"
         }
+
+        -- -- display colors in file
+        -- use {
+        --     "rrethy/vim-hexokinase",
+        --     config = require "plugins.hexokinase",
+        --     run = "make hexokinase"
+        -- }
 
         use {
             "bkad/CamelCaseMotion",
@@ -124,13 +128,22 @@ return require("packer").startup(
         use "tpope/vim-fugitive"
 
         -- -- collection of common configurations for built-in language server client
-        -- use {
-        --     "neovim/nvim-lspconfig",
-        --     config = require "plugins.lspconfig"
-        -- }
+        use {
+            "neovim/nvim-lspconfig",
+            config = require "plugins.lspconfig"
+        }
 
+        use {
+            'williamboman/nvim-lsp-installer',
+        }
+        
         -- -- can be removed in the future when elixir plugin for treesitter is improved
         use "elixir-editors/vim-elixir"
+
+        -- -- fzf native telescope as replacement for telescope
+        -- use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' 
+        --      config = require "plugins.telescope"
+        --  }
 
         --  highly extendable fuzzy finder over lists
         use {
@@ -141,6 +154,7 @@ return require("packer").startup(
                 {"nvim-lua/plenary.nvim"}
             }
         }
+        
         -- Github Flavored Markdown
         use "rhysd/vim-gfm-syntax"
 
@@ -163,8 +177,8 @@ return require("packer").startup(
         }
 
         -- for autocompletion, intellisense and code-completion
-        use {'neoclide/coc.nvim', branch = 'release',
-        config = require "plugins.cocnvim"}
+        -- use {'neoclide/coc.nvim', branch = 'release',
+        -- config = require "plugins.cocnvim"}
 
 
         -- Show an icon in autocompletion list
@@ -191,6 +205,9 @@ return require("packer").startup(
         "catppuccin/nvim",
         as = "catppuccin",
         config = function() vim.cmd[[colorscheme catppuccin]] end, })
+
+        -- auto window resize vim 
+        use "camspiers/lens.vim"
 
     end
 )

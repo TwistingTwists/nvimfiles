@@ -98,4 +98,9 @@ vim.opt.diffopt = "filler,internal,algorithm:histogram,indent-heuristic"
 vim.o.mouse = "a"
 
 -- default theme for neovim
--- vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme tokyonight]]
+
+vim.opt.foldmethod ='indent'
+vim.opt.foldnestmax=5
+vim.opt.foldtext="substitute(getline(v:foldstart),'\\t',repeat('\\s',&tabstop),'g').'...'.trim(getline(v:foldend))"
+-- vim.opt.colorscheme="tokyonight"
