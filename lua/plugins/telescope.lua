@@ -21,4 +21,6 @@ return function()
         {noremap = true, silent = true}
     )
     vim.api.nvim_set_keymap("n", "<Leader>of", [[<Cmd>Telescope oldfiles<CR>]], {noremap = true, silent = true})
+
+    require('telescope').setup{ defaults = { file_ignore_patterns = {"node_modules"} } } 
 end
