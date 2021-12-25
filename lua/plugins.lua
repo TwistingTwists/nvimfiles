@@ -209,5 +209,14 @@ return require("packer").startup(
         -- auto window resize vim 
         use "camspiers/lens.vim"
 
+        -- autosave plugin
+        use {
+            "Pocco81/AutoSave.nvim",
+            config = require "plugins.autosave"
+        }
+
+        -- auto match html elements 
+        use "leafOfTree/vim-matchtag"
+
     end
 )

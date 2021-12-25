@@ -34,9 +34,11 @@ return function()
 --       case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
 --                                        -- the default case_mode is "smart_case"
 --     }
---   }
+--   },
+--   defaults = { file_ignore_patterns = {"node_modules"} }
 -- }
--- -- To get fzf loaded and working with telescope, you need to call
--- -- load_extension, somewhere after setup function:
+-- To get fzf loaded and working with telescope, you need to call
+-- load_extension, somewhere after setup function:
 -- require('telescope').load_extension('fzf')
+require('telescope').setup{ defaults = { file_ignore_patterns = {"node_modules"} } } 
 end

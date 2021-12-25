@@ -86,7 +86,6 @@ local servers = {
   "pyright",
   "emmet_ls",
   "dockerls",
-  "cssmodules_ls",
   "cssls"
 }
 

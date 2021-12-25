@@ -101,6 +101,9 @@ vim.o.mouse = "a"
 vim.cmd[[colorscheme tokyonight]]
 
 vim.opt.foldmethod ='indent'
-vim.opt.foldnestmax=5
+vim.opt.foldnestmax=15
 vim.opt.foldtext="substitute(getline(v:foldstart),'\\t',repeat('\\s',&tabstop),'g').'...'.trim(getline(v:foldend))"
 -- vim.opt.colorscheme="tokyonight"
+
+-- save macros 
+-- let @a="i<ENTER><span class="font-bold"><ESC>$a</span><ESC>"
