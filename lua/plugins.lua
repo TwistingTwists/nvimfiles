@@ -23,11 +23,10 @@ return require("packer").startup(
         }
 
         -- -- display colors in file
-        -- use {
-        --     "rrethy/vim-hexokinase",
-        --     config = require "plugins.hexokinase",
-        --     run = "make hexokinase"
-        -- }
+        -- https://github.com/RRethy/vim-hexokinase/issues/69#issuecomment-1000956011
+        use {'rrethy/vim-hexokinase'
+        , run = 'cd ~/.local/share/nvim/site/pack/packer/start/vim-hexokinase && make hexokinase'}
+
 
         use {
             "bkad/CamelCaseMotion",
@@ -212,7 +211,7 @@ return require("packer").startup(
         -- autosave plugin
         use {
             "Pocco81/AutoSave.nvim",
-            config = require "plugins.autosave"
+            -- config = require "plugins.autosave"
         }
 
         -- auto match html elements 
