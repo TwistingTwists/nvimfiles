@@ -85,6 +85,10 @@ return function()
     require'nvim-tree'.setup {
       view = {
         auto_resize = true,
+        -- auto_close = true,
+        update_focused_file = {
+           enable      = true,
+        },
         mappings = {
           custom_only = true,
           list = nvim_tree_bindings
